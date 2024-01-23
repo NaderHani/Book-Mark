@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Mark</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="bookmark container my-5 w-100 rounded-5">
+        <div class="col-lg-4 book-head w-100 mx-auto py-5 d-flex justify-content-center">
+            <h1>Bookmarker </h1>
+        </div>
+        <h2 class="pt-4 px-4">Bookmark your favorite sites<i class="fa fa-solid fa-bookmark mx-2 d-inline-block"></i></h2>
+        <div class="book-content w-75 mx-auto py-5">
+            <i class="fa fa-solid fa-book-bookmark mx-2"></i> <label for="bookSiteNameInput"> Site Name</label>
+            <input type="text" id="inputBookName" class="form-control mb-3 is-invalid" oninput="bookValidate(this.value)">
+            <i class="fa fa-solid fa-link mx-2"></i><label for="bookUrlInput">  Site URL</label>
+            <input type="text" id="inputBookUrl" class="form-control mb-3">
+            <p class="text-muted ms-5">Ex: https://google.com</p>
+            <div class="w-100 d-flex justify-content-center">
+                <button id="addbtn" class="submit btn btn-success" onclick="bookAdd()">Submit</button>
+                <button id="updatebtn" class="submit btn btn-warning d-none" onclick="getBookUpdate()">Update</button>
+            </div>
+        </div>
+        <div class="w-75 mx-auto pb-2">
+            <input type="text" placeholder="Search" class="form-control mb-3" oninput="BookSearch(this.value)" >
+        </div>
+        <div class="-outbut w-75 mx-auto py-5">
+            <table class="table text-center">
+                <thead>
+                    <th>index</th>
+                    <th>WebSite Name</th>
+                    <th>Visit</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="tableBody">
+ 
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
